@@ -2,6 +2,7 @@
 
 ### Website Description goes here.
 
+[![Build Status](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website.svg?branch=master)](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website)
 
 #### UX
 
