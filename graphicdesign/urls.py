@@ -24,7 +24,7 @@ from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
 from home import urls as urls_home
-from home.views import about, news, products
+from home.views import about, news, work
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -37,5 +37,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^about/', about , name='about'),
     url(r'^news/', news , name='news'),
-    url(r'^products/', products , name='news')
+    url(r'^work/', work , name='work')
 ]

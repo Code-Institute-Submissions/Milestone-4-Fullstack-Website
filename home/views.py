@@ -13,7 +13,7 @@ def news(request):
     """A view that displays the news page"""
     return render(request, "news.html")
     
-def products(request):
-    """A view that displays the products page"""
-    return render(request, "products.html")
+def work(request):
+    """A view that displays the work page"""
+    return render(request, "work.html")
     
