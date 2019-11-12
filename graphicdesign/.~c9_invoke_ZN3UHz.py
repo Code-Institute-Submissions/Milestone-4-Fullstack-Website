@@ -37,5 +37,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^about/', about , name='about'),
     url(r'^news/', news , name='news'),
-    url(r'^products/', products , name='news')
+    url(r'^products/', products , name='products')
 ]
