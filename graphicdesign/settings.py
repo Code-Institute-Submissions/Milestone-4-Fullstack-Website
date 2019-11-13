@@ -149,7 +149,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # ---------------------------------------------
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
+# static url was /static/
 STATIC_URL = 'https://%s/%s/%us-east-2/static/img/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -159,7 +159,8 @@ MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = 'https://%s/%s/%us-east-2/media/images/'
+# media url was /media/
+MEDIA_URL = 'https://%s/%s/%(us-east-2),(/media/images/)'
 # ---------------------------------------------
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')
