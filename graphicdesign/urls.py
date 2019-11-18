@@ -23,8 +23,12 @@ from checkout import urls as urls_checkout
 from products.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
-from home import urls as urls_home
-from home.views import about, news, work
+from about import urls as urls_about
+from about.views import about
+from news import urls as urls_news
+from news.views import news
+from work import urls as urls_work
+from work.views import work
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
