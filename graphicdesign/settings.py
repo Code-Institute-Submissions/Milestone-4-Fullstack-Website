@@ -154,7 +154,7 @@ STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 # static url was /static/
 # https://%s/%s/%/AWS_S3_CUSTOM_DOMAIN/STATICFILES_LOCATION/
-STATIC_URL = '/static/'
+STATIC_URL = '/static/img'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
