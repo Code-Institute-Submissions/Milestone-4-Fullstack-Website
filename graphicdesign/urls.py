@@ -26,7 +26,7 @@ from .settings import MEDIA_ROOT
 from about import urls as urls_about
 from about.views import about
 from news import urls as urls_news
-from news.views import news
+from news.views import news, looking_for_work
 from work import urls as urls_work
 from work.views import work
 
@@ -41,5 +41,6 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^about/', about , name='about'),
     url(r'^news/', news , name='news'),
-    url(r'^work/', work , name='work')
+    url(r'^work/', work , name='work'),
+    url(r'^news/looking_for_work/', include(urls_news))
 ]
