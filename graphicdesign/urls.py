@@ -26,9 +26,9 @@ from .settings import MEDIA_ROOT
 from about import urls as urls_about
 from about.views import about
 from news import urls as urls_news
-from news.views import news, looking_for_work
+from news.views import news, looking_for_work, project_complete, opening
 from work import urls as urls_work
-from work.views import work
+from work.views import work, censored_green, city, lady_in_red, protest_target
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -41,6 +41,13 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     url(r'^about/', about , name='about'),
     url(r'^news/', news , name='news'),
+    url(r'^news/',include(urls_news)),
     url(r'^work/', work , name='work'),
-    url(r'^news/looking_for_work/', include(urls_news))
+    url(r'^looking_for_work/', looking_for_work, name="looking_for_work"),
+    url(r'^project_complete/', project_complete, name="project_complete"),
+    url(r'^opening/', opening, name="opening"),
+    url(r'^censored_green/', censored_green, name="censored_green"),
+    url(r'^city/', city, name="city"),
+    url(r'^lady_in_red/', lady_in_red, name="lady_in_red"),
+    url(r'^protest_target/', protest_target, name="protest_target")
 ]
