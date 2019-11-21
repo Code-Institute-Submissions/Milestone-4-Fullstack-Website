@@ -4,17 +4,57 @@
 
 [![Build Status](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website.svg?branch=master)](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website)
 
+
 #### UX
 
+I created this website to sell graphic design.
+
+**User Story 1:**
+John Doe is curious about the purpose of the site. He can read about the reason it was created on the home page.
+
+**User Story 2:**
+Jane Doe wants to browse the art. She can do that by clicking "work" in the nav bar.
+
+**User Story 3:**
+Jeff Doe wants to read more about a specific art piece. He can do that by clicking on its image in the work page.
+
+**User Story 4:**
+Jane Doe wants to login. She can do so by clicking on "login" in the navbar and filling out the following form.
+
+**User Story 5:**
+John Doe wants to sign up. She can do so by clicking on "Register" in the navbar and filling out the following form.
+
+**User Story 6:**
+Jeff Doe wants to read more about the site. He can do so by clicking "about" in the navbar.
+
+**User Story 7:**
+Jerry Doe wants to read about the sites news. He can do so by clicking "news" in the navbar.
+
+**User Story 8:**
+Jane Doe wants to buy a logo. She can do so by clicking add on the product and then checking out.
+
+### Features
+
+- User is able to view all the art by clicking the "work" on the navbar.
+
+- User is able to login or register by clicking "login/register" on the navbar and filling out the form.
+
+- User is able to read about a specific art piece by clicking its image in the work page. 
+
+- User is able to read a news article by clicking "news" on the navbar and selecting an story.
+
+- User is able to read about the site by clicking on "about" on the navbar.
+
+- User is able to buy a product by clicking "add to cart" and checking out.
 
 
 #### Technologies Used
 
-- HTML
+- HTML - HTML was used to build the structure of the site.
 
-- CSS
+- CSS - CSS was used to style the site.
 
-- Git
+- Git - Git was used for version control.
 
 - Bootstrap - The project uses bootstrap for the navbar, modals, and responsiveness.
 
@@ -26,16 +66,52 @@
 
 - Python - This project uses python to execute the logic.
 
-- Django - 
+- Django - Django was used to create the website.
+
+- AWS - AWS was used to store images and other static files.
 
 #### Testing
 
+Unit Testing was used.
 
 #### Deployment to Heroku
+
+**Name: Digital Noir**
+
+**URI:**https://milestone-four-noir-digital.herokuapp.com/
+
+This website was deployed through Heroku directly from the master branch.  The difference between the development version and deployment version are little to none. The database is stored on AWS and is set up through Heroku. Using a Procfile and a requirments.txt file Heroku installs the required software in order to run the site. To get the site to run with Heroku do the following to create the required files.
+
+- **Creating Requirments.txt** - run the following in the terminal.
+ ``` 
+sudo pip3 freeze --local > requirements.txt
+ ```
+
+- **Creating Procfile** - run the following in the terminal.
+```
+echo web: python > Procfile 
+```
+- **Login in to Heroku** - Through the terminal you can use to login and to check the app.
+```
+heroku login
+heroku apps
+```
+ - **Initialize git** - Initialise git and set the remote for Heroku.
+```
+git init
+heroku git:remote -a milestone-four-noir-digital
+```
+- **Push to Heroku** - Finally push to Heroku.
+```
+git push heroku master
+```
+- **Don't Forget!** - In heroku's settings under *Config Vars* set ** DISABLE_COLLECTSTATIC to 1 ** and all other keys to their values.
+
 
 
 #### Things to do in the Future
 
+- Create more photos for the work page.
 
 #### Credits
 
