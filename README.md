@@ -68,7 +68,7 @@ Jane Doe wants to buy a logo. She can do so by clicking add on the product and t
 
 - Django - Django was used to create the website.
 
-- AWS - AWS was used to store images and other static files.
+- AWS S3 - AWS was used to store images and other static files using a postgresql database.
 
 #### Testing
 
