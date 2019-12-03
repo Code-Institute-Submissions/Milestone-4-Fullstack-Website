@@ -13,15 +13,14 @@
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-        <!--Bootstrap CSS-->
+    <!--Bootstrap CSS-->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <!--Navbar CSS-->
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <!--Favicon-->
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <!--Image Grid CSS-->
     <link rel="stylesheet" href="{% static 'css/image_grid.css' %}"/>
     {% block head_js %}
@@ -77,7 +76,7 @@
     {% endif %}
 
     <div class="parallax"></div>
-
+    <br>
     <div class="container">
         <!--<div class="display">-->
         <!--    <form action="{% url 'search' %}" method="get">-->
@@ -90,17 +89,14 @@
         
         {% endblock %}
     </div>
-    <!---->
     <br>
     <div class="parallax-two"></div>
-
-<!----------------------------------------------->
 
     <footer>
         <!--Scripts-->
 
         <!---->
-        
+                <div class="container">
         <div class="social-links">
                     <h5>Follow Us!</h5>
                     <!--Facebook-->
@@ -109,6 +105,7 @@
                     <span><a href="https://www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>
                     <!--Instagram-->
                     <span><a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+    </div>
 
     </div>
         <div class="container">

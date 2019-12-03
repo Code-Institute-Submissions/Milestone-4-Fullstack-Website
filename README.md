@@ -138,3 +138,7 @@ git push heroku master
 - [View All Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Browser.png)
 
 - [View All Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Phone.png) 
+
+- [Testimonial Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Browser.png)
+
+- [Testimonial Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Phone.png) 

@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, TestimonialForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 
+
+from .forms import TestimonialForm
+from .models import Testimonial 
 
 # Create your views here.
 def index(request):
@@ -50,6 +53,15 @@ def profile(request):
     """A view that displays the profile page of a logged in user"""
     return render(request, 'profile.html')
 
+@login_required
+def testimonial(request, id="testimonial-form"):
+    """A view that submits a user testimonial"""
+    test_form = TestimonialForm(request.POST)
+    if test_form.is_valid():
+        test_form.save()
+    # context = {test_form : 'test_form'}
+    # args = {'test_form': test_form, 'next': request.GET.get('next', '')}
+    return render(request, 'profile.html', {"test_form": test_form})
 
 def register(request):
     """A view that manages the registration form"""

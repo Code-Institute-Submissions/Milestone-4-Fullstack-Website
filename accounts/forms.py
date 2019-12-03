@@ -39,4 +39,6 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
         
-        
+class TestimonialForm(forms.Form):
+    name = forms.CharField()
+    testimonial = forms.CharField()
