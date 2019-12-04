@@ -15,18 +15,28 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import RedirectView
+from django.views.static import serve
+
 from accounts import urls as urls_accounts
+from accounts.views import get_posts, post_detail, create_or_edit_post
+
 from products import urls as urls_products
+from products.views import all_products
+
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
-from products.views import all_products
+
 from django.views import static
 from .settings import MEDIA_ROOT
+
 from about import urls as urls_about
 from about.views import about
+
 from news import urls as urls_news
 from news.views import news, looking_for_work, project_complete, opening
+
 from work import urls as urls_work
 from work.views import work, censored_green, city, lady_in_red, protest_target
 
@@ -49,5 +59,8 @@ urlpatterns = [
     url(r'^censored_green/', censored_green, name="censored_green"),
     url(r'^city/', city, name="city"),
     url(r'^lady_in_red/', lady_in_red, name="lady_in_red"),
-    url(r'^protest_target/', protest_target, name="protest_target")
+    url(r'^protest_target/', protest_target, name="protest_target"),
+    url(r'^create_or_edit_post/', create_or_edit_post, name="postform"),
+    url(r'^post_detail/', post_detail, name="postdetail"),
+    url(r'^get_posts/', get_posts, name="posts"),
 ]

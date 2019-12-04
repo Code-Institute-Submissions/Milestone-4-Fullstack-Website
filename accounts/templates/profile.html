@@ -5,24 +5,11 @@
         <div class="col-md-12">
             <h2>Welcome to your profile page {{ user.username }}.</h2>
 
-            <h4>Submit a testimonial below.</h4>
-            <p>{{ user.testimonial }}</p>
-            <div class="row">
-                <form role="form" method="POST" id="testimonial-form" action="{% url 'profile' %}">
-                    <div class="col-md-12">
-                        <h4>Enter a name or company.</h4>
-                        <input type="text" class="form-control input-lg" id="inputlg" name="Textbox" maxlength="50" placeholder="maxlength:50 characters" />
-                        <h4>Enter a testimonial if desired.</h4>
-                        <textarea type="text" class="form-control" rows="5" id="testimonial" name="Textbox" maxlength="100" placeholder="maxlength:100 characters"></textarea>
-                    </div>
-                    <div class="col-md-12">
-                        <br> {% csrf_token %}
-                        <input class=" btn btn-primary" id="submit_testimonial_btn" name="commit" type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
-
+            <a href="/create_or_edit_post"><button type="button" class="btn btn-primary">Post Testimonial</button></a>
+            <a href="/"><button type="button" class="btn btn-success">View Testimonial</button></a>
+            <a href="/"><button type="button" class="btn btn-info">Testimonial Detail</button></a>
         </div>
     </div>
+</div>
 </div>
 {% endblock %}

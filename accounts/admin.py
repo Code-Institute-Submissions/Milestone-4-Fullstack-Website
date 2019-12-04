@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Testimonial
+from .models import Post
 
-class Testimonial(admin.ModelAdmin):
-        model = Testimonial
+admin.site.register(Post)
+

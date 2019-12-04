@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from .models import Post
 
 
 class UserLoginForm(forms.Form):
@@ -38,7 +39,10 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
-        
-class TestimonialForm(forms.Form):
-    name = forms.CharField()
-    testimonial = forms.CharField()
+    
+
+class BlogPostForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = ('title', 'content', 'image', 'tag', 'published_date')
