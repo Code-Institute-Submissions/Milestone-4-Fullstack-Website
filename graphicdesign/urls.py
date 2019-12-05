@@ -19,7 +19,6 @@ from django.views.generic import RedirectView
 from django.views.static import serve
 
 from accounts import urls as urls_accounts
-from accounts.views import get_posts, post_detail, create_or_edit_post
 
 from products import urls as urls_products
 from products.views import all_products
@@ -39,6 +38,9 @@ from news.views import news, looking_for_work, project_complete, opening
 
 from work import urls as urls_work
 from work.views import work, censored_green, city, lady_in_red, protest_target
+
+from posts import urls as urls_posts
+from posts.views import get_posts, post_detail, create_or_edit_post
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -60,7 +62,7 @@ urlpatterns = [
     url(r'^city/', city, name="city"),
     url(r'^lady_in_red/', lady_in_red, name="lady_in_red"),
     url(r'^protest_target/', protest_target, name="protest_target"),
-    url(r'^create_or_edit_post/', create_or_edit_post, name="postform"),
-    url(r'^post_detail/', post_detail, name="postdetail"),
-    url(r'^get_posts/', get_posts, name="posts"),
+    url(r'^create_or_edit_post/', create_or_edit_post, name="create_or_edit_post"),
+    url(r'^post_detail/', post_detail, name="post_detail"),
+    url(r'^get_posts/', get_posts, name="get_posts"),
 ]

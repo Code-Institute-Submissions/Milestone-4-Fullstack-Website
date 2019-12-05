@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
-from .models import Post
+from .models import NeedsForm
 
 
 class UserLoginForm(forms.Form):
@@ -40,9 +40,7 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
     
-
-class BlogPostForm(forms.ModelForm):
-
+class CustomerNeedsForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ('title', 'content', 'image', 'tag', 'published_date')
+        model = NeedsForm
+        fields = ('title', 'content', 'image')
