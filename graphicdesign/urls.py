@@ -19,6 +19,7 @@ from django.views.generic import RedirectView
 from django.views.static import serve
 
 from accounts import urls as urls_accounts
+from accounts.views import needsform, index
 
 from products import urls as urls_products
 from products.views import all_products
@@ -44,7 +45,8 @@ from posts.views import get_posts, post_detail, create_or_edit_post
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name='index'),
+    url(r'^$', index, name='index'),
+    url(r'^products/', all_products, name='products'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
@@ -65,4 +67,5 @@ urlpatterns = [
     url(r'^create_or_edit_post/', create_or_edit_post, name="create_or_edit_post"),
     url(r'^post_detail/', post_detail, name="post_detail"),
     url(r'^get_posts/', get_posts, name="get_posts"),
+    url(r'^needsform/', needsform, name="needsform"),
 ]

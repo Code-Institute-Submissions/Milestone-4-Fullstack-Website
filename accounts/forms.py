@@ -40,7 +40,7 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
     
-class CustomerNeedsForm(forms.ModelForm):
+class NeedsForm(forms.ModelForm):
     class Meta:
         model = NeedsForm
         fields = ('title', 'content', 'image')

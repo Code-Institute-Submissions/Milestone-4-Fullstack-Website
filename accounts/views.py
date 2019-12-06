@@ -1,18 +1,26 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.contrib import messages, auth
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from .forms import UserLoginForm, UserRegistrationForm, NeedsForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+from posts.views import create_or_edit_post
 
 # Create your views here.
 def index(request):
     """A view that displays the index page"""
     return render(request, "index.html")
 
-def needsform(request):
+def needsform(request, pk=None):
     """A view that displays the needsform page"""
-    return render(request, "needs_form.html")
+    post = get_object_or_404(NeedsForm, pk=pk) if pk else None
+    if request.method == "POST":
+        form = NeedsForm(request.POST, request.FILES, instance=post)
+        post = form.save()
+        return redirect(profile, post.pk)
+    else:
+        form = NeedsForm(instance=post)
+    return render(request, 'needsform.html', {'form': form})
 
 def logout(request):
     """A view that logs the user out and redirects back to the index page"""

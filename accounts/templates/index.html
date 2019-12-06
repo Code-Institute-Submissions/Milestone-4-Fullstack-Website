@@ -1,5 +1,85 @@
-{% extends 'base.html' %}
-{% block content %}
-<h3>Welcome to my AuthenticateMe web application.</h3>
-<p>I'm learning how to build functionality that will allow users to register, login and logout of web applications.</p>
+{% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block content %}
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Hello, world!
+				</h2>
+				<p>
+					This is a simple Graphic Design website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="/about">Learn more</a>
+				</p>
+			</div>
+			          <!-- Bootstrap Carousel -->
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="{% static 'img/house.jpg' %}" alt="house" class="">
+                <div class="carousel-caption">
+                  <h3> name </h3>
+                  <h4> testimonial</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="{% static 'img/hood_grey.jpg' %}" alt="hood_grey" class="">
+                <div class="carousel-caption">
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="https://milestone-four-noir-digital.s3.amazonaws.com/static/img/city.jpg" alt="city" class="">
+                <div class="carousel-caption">
+                    <h3>{{ customer.name }}</h3>
+                  <h4>{{ Customer.testimonial}}</h4>
+                  </div>
+              </div>
+
+              <div class="item">
+                <img src="https://milestone-four-noir-digital.s3.amazonaws.com/static/img/protest_target.jpg" alt="protest_target" class="">
+                <div class="carousel-caption">
+                 <h3>{{ customer.name }}</h3>
+                  <h4>{{ Customer.testimonial}}</h4>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="https://milestone-four-noir-digital.s3.amazonaws.com/static/img/smoking_man_brown.jpg" alt="smoking_man_brown" class="">
+                <div class="carousel-caption">
+                 <h3>{{ customer.name }}</h3>
+                  <h4>{{ Customer.testimonial}}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+			<h3>
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
+						<div class="parallax"></div>
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et,
+				pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum
+				nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+			<div class="parallax-two"></div>
+			<p>
+				Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et,
+				pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum
+				nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			</p>
+		</div>
+	</div>
 {% endblock %}
