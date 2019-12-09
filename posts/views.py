@@ -26,8 +26,7 @@ def post_detail(render, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    return render( "postdetail.html", {'post': post})
-# return redirect(post_detail def name function, post
+    return render(render, "postdetail.html", {'post': post})
 
 def create_or_edit_post(request, pk=None):
     """

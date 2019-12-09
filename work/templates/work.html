@@ -1,48 +1,25 @@
-{% extends 'base.html' %}
-{% load static from staticfiles %}
-{% block content %}
+{% extends 'base.html' %} {% load static from staticfiles %} {% block content %}
 
 <h1>Previous Work</h1>
-<h3>Below is some of our work.</h3>
-<h4>Click for more info and testimonials.</h4>
-    <!---->
-    <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- Jumbotron -->
-        <div class="">
-          <div class="container text-center">
-            <h1 class=""></h1>
-            <br>
-          </div>
-        </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="column">
 
-      </div>
+      <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/girl_with_gun_red.jpg' %}" width="460" height="345"></a>
+      <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/hood_grey.jpg' %}" width="460" height="345"></a>
+    </div>
+    <div class="column">
+      <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/house.jpg' %}" width="460" height="345"></a>
+      <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/car_lens_flare_blue.jpg' %}" width="460" height="345"></a>
+    </div>
+    <div class="column">
+      <a href="/protest_target"><img class="img-fluid img-thumbnail" alt="protest target" src="{% static 'img/protest_target.jpg' %}" width="460" height="345"></a>
+      <a href="/city"><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/city.jpg' %}" width="460" height="345"></a>
+    </div>
+    <div class="column">
+      <a href=""><img class="img-fluid img-thumbnail" alt="smoking_man_brown" src="{% static 'img/smoking_man_brown.jpg' %}" width="460" height="345"></a>
+      <a href=""><img class="img-fluid img-thumbnail" alt="storefront_ice" src="{% static 'img/storefront_ice.jpg' %}" width="460" height="345"></a>
     </div>
   </div>
-    <!---->
-<div class="row">
-  <div class="column">
-      
-        <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/girl_with_gun_red.jpg' %}" width="460" height="345"></a>
-        <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/hood_grey.jpg' %}" width="460" height="345"></a>
-     </div>
-  <div class="column">
-        <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/house.jpg' %}" width="460" height="345"></a>
-        <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/car_lens_flare_blue.jpg' %}" width="460" height="345"></a>
-     </div>     
-  <div class="column">
-        <a href="/protest_target"><img class="img-fluid img-thumbnail" alt="protest target" src="{% static 'img/protest_target.jpg' %}" width="460" height="345"></a>
-                <a href="/city"><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/city.jpg' %}" width="460" height="345"></a>
-      </div>
-        <div class="column">
-        <a href=""><img class="img-fluid img-thumbnail" alt="smoking_man_brown" src="{% static 'img/smoking_man_brown.jpg' %}" width="460" height="345"></a>
-        <a href=""><img class="img-fluid img-thumbnail" alt="storefront_ice" src="{% static 'img/storefront_ice.jpg' %}" width="460" height="345"></a>
-     </div>
-
-       <div class="column">
-          
-        <a href="/censored_green"><img class="img-fluid img-thumbnail" alt="censored in green" src="{% static 'img/censored_green.jpg' %}"  width="460" height="345"></img></a>
-     </div>
 </div>
 {% endblock %}
