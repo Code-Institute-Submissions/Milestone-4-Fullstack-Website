@@ -11,8 +11,8 @@ def index(request):
     """A view that displays the index page"""
     return render(request, "index.html")
 
-def needsform(request, pk=None):
-    """A view that displays the needsform page"""
+def NeedsForm(request, pk=None):
+    """A view that displays the NeedsForm page"""
     post = get_object_or_404(NeedsForm, pk=pk) if pk else None
     if request.method == "POST":
         form = NeedsForm(request.POST, request.FILES, instance=post)

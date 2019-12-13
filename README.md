@@ -33,6 +33,21 @@ Jerry Doe wants to read about the sites news. He can do so by clicking "news" in
 **User Story 8:**
 Jane Doe wants to buy a logo. She can do so by clicking add on the product and then checking out.
 
+### Wireframes
+
+- [Home Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Home-Browser.png)
+- [Home Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Home-Phone.png)
+- [About Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/About-Browser.png) 
+- [About Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/About-Phone.png) 
+- [News Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/News-Browser.png) 
+- [News Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/News-Phone.png) 
+- [Login Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Login-Browser.png)
+- [Login Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Login-Phone.png) 
+- [View All Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Browser.png)
+- [View All Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Phone.png) 
+- [Testimonial Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Browser.png)
+- [Testimonial Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Phone.png) 
+
 ### Features
 
 - User is able to view all the art by clicking the "work" on the navbar.
@@ -72,7 +87,7 @@ Jane Doe wants to buy a logo. She can do so by clicking add on the product and t
 
 #### Testing
 
-Unit Testing was used.
+Unit Testing was used as well as manual testing using [W3 Validator](https://validator.w3.org/).
 
 #### Deployment to Heroku
 
@@ -116,29 +131,3 @@ git push heroku master
 #### Credits
 
 - Specials Thanks to the student slack channels, my mentor and stack overflow.❤️
-
-### Wireframes
-
-- [Home Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Home-Browser.png)
-
-- [Home Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Home-Phone.png)
-
-- [About Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/About-Browser.png) 
-
-- [About Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/About-Phone.png) 
- 
-- [News Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/News-Browser.png) 
- 
-- [News Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/News-Phone.png) 
-
-- [Login Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Login-Browser.png)
-
-- [Login Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Login-Phone.png) 
-
-- [View All Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Browser.png)
-
-- [View All Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/View-all-Phone.png) 
-
-- [Testimonial Browser](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Browser.png)
-
-- [Testimonial Phone](https://milestone-four-noir-digital.s3.us-east-2.amazonaws.com/static/wireframes/Testimonial-Phone.png) 

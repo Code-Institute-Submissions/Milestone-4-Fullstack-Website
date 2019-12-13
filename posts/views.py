@@ -4,6 +4,7 @@ from .models import Post
 from .forms import BlogPostForm
 
 
+
 def get_posts(request):
     """
     Create a view that will return a list
@@ -39,7 +40,7 @@ def create_or_edit_post(request, pk=None):
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
-            return redirect(post_detail, post.pk)
+            return render(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
     return render(request, 'blogpostform.html', {'form': form})

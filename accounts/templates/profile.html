@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Welcome to your profile page {{ user.username }}.</h2>
-            <a href="/needsform"><button type="button" class="btn btn-primary">Needs Form </button></a>
+            <a href="{% url 'NeedsForm' %}"><button type="button" class="btn btn-primary">Needs Form </button></a>
             <!--Hide buttons until purchase-->
             <h3>Testimonials</h3>
-            <a href="/create_or_edit_post"><button type="button" class="btn btn-primary">Post </button></a>
+            <a href="{% url 'create_or_edit_post'%}"><button type="button" class="btn btn-primary">Post </button></a>
             <a href="{% url 'get_posts' %}"><button type="button" class="btn btn-success">Get </button></a>
             <a href="{% url 'post_detail' %}"><button type="button" class="btn btn-warning">detail </button></a>
         </div>

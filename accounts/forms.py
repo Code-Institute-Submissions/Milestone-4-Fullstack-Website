@@ -43,4 +43,4 @@ class UserRegistrationForm(UserCreationForm):
 class NeedsForm(forms.ModelForm):
     class Meta:
         model = NeedsForm
-        fields = ('title', 'content', 'image')
+        fields = ['title', 'content', 'image']
