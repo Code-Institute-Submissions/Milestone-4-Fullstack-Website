@@ -48,13 +48,12 @@
                     <li><a href="/news"> News</a></li>
                     <li><a href="/work"> Work</a></li>
 
-                    <!----------------------------------------------->
                     {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}"></i> Profile</a></li>
-                    <li><a href="{% url 'logout' %}"></i> Log Out</a></li>
+                    <li><a href="{% url 'profile' %}"> Profile</a></li>
+                    <li><a href="{% url 'logout' %}"> Log Out</a></li>
                     {% else %}
-                    <li><a href="{% url 'register' %}"></i> Register</a></li>
-                    <li><a href="{% url 'login' %}"></i> Log In</a></li>
+                    <li><a href="{% url 'register' %}"> Register</a></li>
+                    <li><a href="{% url 'login' %}"> Log In</a></li>
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
@@ -78,13 +77,6 @@
 
     <br>
     <div class="container">
-        <!--<div class="display">-->
-        <!--    <form action="{% url 'search' %}" method="get">-->
-        <!--        <input type="text" name="q">-->
-        <!--        <button type="submit">Search</button>-->
-        <!--    </form>-->
-        <!--</div>-->
-
         {% block content %} {% endblock %}
     </div>
     <br>
@@ -95,7 +87,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="container">
-                        <div class="social-links">
+                        <div class="container">
                             <h5>Follow Us!</h5>
                             <!--Facebook-->
                             <span><a href="https://www.facebook.com"><i class="fa fa-facebook-square 5x" aria-hidden="true"></i></a></span>
@@ -106,6 +98,14 @@
                         </div>
 
                         <div class="container">
+                            <br>
+                             <div class="display">
+            <form action="{% url 'search' %}" method="get">
+                <input type="text" name="q">
+                <button type="submit">Search</button>
+            </form>
+            <br>
+        </div>
                             <p>Made by Derek Olson</p>
                         </div>
                     </div>
@@ -113,16 +113,13 @@
 
                 <!--Testimonials-->
                 <div class="col-md-6">
-                    
-                    <div class="test-container">
-                        <img src="{% static 'img/house.jpg' %}" alt="Avatar" style="width:90px">
-                        <p>random.shuffle(Posts)</p>
-                    </div>
-
                     <div class="test-container">
                         <img src="{% static 'img/city.jpg' %}" alt="Avatar" style="width:90px">
+                        <!--{{ post.author }}-->
+                        <!--{{ post.title }}-->
                         <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                        <p>No one is better than John Doe.</p>
+                        <!--{{ post.content|truncatewords:30 }}-->
+                        <p>No one is better than Noir Digital.</p>
                     </div>
                 </div>
 
