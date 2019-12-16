@@ -1,6 +1,6 @@
 # [Noir Digital](https://milestone-four-noir-digital.herokuapp.com/)
 
-### Website Description goes here.
+### This site is an ecommerce website selling art prints. A user can also leave a testimonial and request something custom.
 
 [![Build Status](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website.svg?branch=master)](https://travis-ci.org/thestarvingcoder/Milestone-4-Fullstack-Website)
 
@@ -87,7 +87,23 @@ Jane Doe wants to buy a logo. She can do so by clicking add on the product and t
 
 #### Testing
 
-Unit Testing was used as well as manual testing using [W3 Validator](https://validator.w3.org/).
+Unit Testing was used as well as manual testing using [W3 Validator](https://validator.w3.org/).  I used [Responsinator](https://www.responsinator.com/) to check the responsiveness of my site on various devices.
+
+Automated testing using Jasmine was not used as there is little JavaScript logic in the site. The only JS written excluding what came with the theme came from materialize which was the sidenav for mobile use. 
+
+Automated testing using unittest was used to test the routes and connected templates. It can be run by typing the following in the terminal.
+```
+python3 tests_run.py
+```
+
+##### Manual Testing
+
+Manual testing was done following the user stories mentioned above.
+
+
+- **Signup a User** - User is able to Signup by clicking Signup on the navbar and filling out the form. They will then be redirected to the home page. 
+
+- **Login a User** - User is able to login by clicking login on the navbar and filling out the form. They will then be redirected to the home page.
 
 #### Deployment to Heroku
 
