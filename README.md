@@ -89,11 +89,11 @@ Jane Doe wants to buy a logo. She can do so by clicking add on the product and t
 
 Unit Testing was used as well as manual testing using [W3 Validator](https://validator.w3.org/).  I used [Responsinator](https://www.responsinator.com/) to check the responsiveness of my site on various devices.
 
-Automated testing using Jasmine was not used as there is little JavaScript logic in the site. The only JS written excluding what came with the theme came from materialize which was the sidenav for mobile use. 
+Automated testing using Jasmine was not used as there is little JavaScript logic in the site. 
 
 Automated testing using unittest was used to test the routes and connected templates. It can be run by typing the following in the terminal.
 ```
-python3 tests_run.py
+python3 test_run.py
 ```
 
 ##### Manual Testing
