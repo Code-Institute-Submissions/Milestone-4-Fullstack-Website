@@ -1,9 +1,6 @@
 {% extends "base.html" %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block content %}
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
-        <a class="story-img" href="#">
-                <img src="" class="img-circle">
-            </a>
         <p><span class="boldtext">Author:</span> {{ user.username }}</p>
     </div>
     <div class="col-sm-10 col-md-9">
@@ -16,7 +13,7 @@
                 <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                 <p><span class="boldtext">Views:</span> {{post.views}}</p>
                 <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Profile</a>
+                <a href="{% url '' %}" class="btn btn-default">Back to Profile</a>
                 <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
                 <hr>
             </div>

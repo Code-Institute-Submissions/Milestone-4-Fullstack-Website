@@ -4,38 +4,14 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Welcome to your profile page {{ user.username }}.</h2>
-            <a href="{% url 'NeedsForm' %}"><button type="button" class="btn btn-primary">Needs Form </button></a>
-            <!--Hide buttons until purchase-->
-            <h3>Testimonials</h3>
-            <a href="{% url 'create_or_edit_post'%}"><button type="button" class="btn btn-primary">Post </button></a>
-            <a href="{% url 'get_posts' %}"><button type="button" class="btn btn-success">Get </button></a>
-            <a href="{% url 'post_detail' %}"><button type="button" class="btn btn-warning">detail </button></a>
+            <a href="{% url 'NeedsForm' %}"><button type="button" class="btn btn-primary">Want something custom? </button></a>
+            <h2>Post a testimonial if you are happy with our products.</h2>
+            <a href="{% url 'create_or_edit_post'%}"><button type="button" class="btn btn-primary">Post</button></a>
+                <a href="" class="btn btn-default">View Post</a>
         </div>
     </div>
-    
-    <div class="row">
-    <div class="col-md-2 col-sm-3 text-center">
-        <a class="story-img" href="#">
-                <img src="" class="img-circle">
-            </a>
-        <p><span class="boldtext">Author:</span> {{ user.username }}</p>
-    </div>
-    <div class="col-sm-10 col-md-9">
-        {% if post.image %}
-        <img class="img-blogpost" src="/media/{{ post.image }}"> {% endif %}
-        <h3>{{ post.title }}</h3>
-        <div class="row">
-            <div class="col-xs-9">
-                <p>{{ post.content }}</p>
-                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                <a href="" class="btn btn-default">Edit Post</a>
-                <hr>
-            </div>
-        </div>
-    </div>
-</div>
     
 </div>
 {% endblock %}
+
+<!--{% url 'post_detail' post.id %}-->

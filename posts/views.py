@@ -12,11 +12,11 @@ def get_posts(request):
     and render them to the 'blogposts.html' template
     """
     posts = Post.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')
+    ).order_by('-published_date')
     return render(request, "getposts.html", {'posts': posts})
 
 
-def post_detail(render, pk):
+def post_detail(request, pk):
     """
     Create a view that returns a single
     Post object based on the post ID (pk) and
@@ -27,7 +27,7 @@ def post_detail(render, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    return render(render, "postdetail.html", {'post': post})
+    return render(request, "postdetail.html", {'post': post})
 
 def create_or_edit_post(request, pk=None):
     """
@@ -40,7 +40,7 @@ def create_or_edit_post(request, pk=None):
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
-            return render(post_detail, post.pk)
+            return redirect("/", post.pk)
     else:
         form = BlogPostForm(instance=post)
     return render(request, 'blogpostform.html', {'form': form})

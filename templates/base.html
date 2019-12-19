@@ -99,13 +99,13 @@
 
                         <div class="container">
                             <br>
-                             <div class="display">
-            <form action="{% url 'search' %}" method="get">
-                <input type="text" name="q">
-                <button type="submit">Search</button>
-            </form>
-            <br>
-        </div>
+                            <div class="display">
+                                <form action="{% url 'search' %}" method="get">
+                                    <input type="text" name="q">
+                                    <button type="submit">Search</button>
+                                </form>
+                                <br>
+                            </div>
                             <p>Made by Derek Olson</p>
                         </div>
                     </div>
@@ -114,17 +114,24 @@
                 <!--Testimonials-->
                 <div class="col-md-6">
                     <div class="test-container">
-                        <img src="{% static 'img/city.jpg' %}" alt="Avatar" style="width:90px">
-                        <!--{{ post.author }}-->
-                        <!--{{ post.title }}-->
+                        <h4>Testimonials</h4>
+                        <!--Example-->
                         <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                        <!--{{ post.content|truncatewords:30 }}-->
                         <p>No one is better than Noir Digital.</p>
+                        <!--Code-->
+                        {% for posts in post_detail %}
+                        
+                        <p><span>{{ user.username }}</span>{{ post.title }}</p>
+                        
+                                {% if post.content %}
+                        <p>{{ post.content|truncatewords:30 }}</p>
+                            {% endif %}
+                            
+                        {% endfor %}
                     </div>
                 </div>
-
+             
             </div>
-        </div>
 
     </footer>
 </body>

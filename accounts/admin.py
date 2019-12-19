@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import NeedsForm
+from .models import NeedsFormModel
 
-admin.site.register(NeedsForm)
+admin.site.register(NeedsFormModel)
