@@ -4,14 +4,13 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Welcome to your profile page {{ user.username }}.</h2>
-            <a href="{% url 'NeedsForm' %}"><button type="button" class="btn btn-primary">Want something custom? </button></a>
+            <p>Order something more unique below.</p>
+            <a href="{% url 'NeedsForm' %}"><button type="button" class="btn btn-primary">Custom Order Form </button></a>
             <h2>Post a testimonial if you are happy with our products.</h2>
             <a href="{% url 'create_or_edit_post'%}"><button type="button" class="btn btn-primary">Post</button></a>
-                <a href="" class="btn btn-default">View Post</a>
+                <a href="{% url 'post_detail'%}" class="btn btn-default">View Post</a>
         </div>
     </div>
     
 </div>
 {% endblock %}
-
-<!--{% url 'post_detail' post.id %}-->

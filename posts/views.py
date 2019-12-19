@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponseRedirect
 from django.utils import timezone
+from django.contrib import messages
 from .models import Post
 from .forms import BlogPostForm
 
@@ -24,9 +25,11 @@ def post_detail(request, pk):
     Or return a 404 error if the post is
     not found
     """
+    
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
+    messages.success(request, 'You have successfully edited a testimonial.')
     return render(request, "postdetail.html", {'post': post})
 
 def create_or_edit_post(request, pk=None):
@@ -40,6 +43,7 @@ def create_or_edit_post(request, pk=None):
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save()
+            messages.success(request, 'You have successfully submitted a testimonial. Thanks!')
             return redirect("/", post.pk)
     else:
         form = BlogPostForm(instance=post)

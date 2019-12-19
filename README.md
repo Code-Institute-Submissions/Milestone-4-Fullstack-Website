@@ -7,7 +7,7 @@
 
 #### UX
 
-I created this website to sell graphic design.
+I created this website to sell graphic design prints and services.
 
 **User Story 1:**
 John Doe is curious about the purpose of the site. He can read about the reason it was created on the home page.
@@ -102,8 +102,14 @@ Manual testing was done following the user stories mentioned above.
 
 
 - **Signup a User** - User is able to Signup by clicking Signup on the navbar and filling out the form. They will then be redirected to the home page. 
-
 - **Login a User** - User is able to login by clicking login on the navbar and filling out the form. They will then be redirected to the home page.
+-  **Buying a product** - A user is able to buy a product by adding it to their cart and checking out.
+-  **Viewing Work** - A user is able to view the previous work by clicking on work in the navbar and clicking on whatever piece they desire.
+-  **Reading News** - A user can read the sites news by clicking news in the navbar and choosing which story they would like to read.
+-  **Reading about the site** - A user can read about the site by clicking about in the navbar and reading about the site.
+-  **Adding a testimonial** - A user can add a testimonial by clicking on profile in the navbar and then clicking on Post to submit a testimonial.
+-  **Submitting a custom work order** - A user can add a custom work order by clicking on profile in the navbar and then clicking on "custom order form". Fill out the form and click send.
+-  **Editing a testimonial** - A user can edit their testimonial by clicking on profile then on edit post to edit their testimonial.
 
 #### Deployment to Heroku
 
