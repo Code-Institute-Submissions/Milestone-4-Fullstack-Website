@@ -38,7 +38,7 @@ from news import urls as urls_news
 from news.views import news, looking_for_work, project_complete, opening
 
 from work import urls as urls_work
-from work.views import work, censored_green, city, lady_in_red, protest_target
+from work.views import work, censored_green, city, girl_with_gun_red, protest_target, house, hood_grey,car_lens_flare_blue, smoking_man_brown, storefront_ice
 
 from posts import urls as urls_posts
 from posts.views import get_posts, post_detail, create_or_edit_post
@@ -61,11 +61,18 @@ urlpatterns = [
     url(r'^project_complete/', project_complete, name="project_complete"),
     url(r'^opening/', opening, name="opening"),
     url(r'^censored_green/', censored_green, name="censored_green"),
+    url(r'^car_lens_flare_blue/', car_lens_flare_blue, name="car_lens_flare_blue"),
+    url(r'^smoking_man_brown/', smoking_man_brown, name="smoking_man_brown"),
+    url(r'^storefront_ice/', storefront_ice, name="storefront_ice"),
     url(r'^city/', city, name="city"),
-    url(r'^lady_in_red/', lady_in_red, name="lady_in_red"),
+    url(r'^house/', house, name="house"),
+    url(r'^hood_grey/', hood_grey, name="hood_grey"),
+    url(r'^girl_with_gun_red/', girl_with_gun_red, name="girl_with_gun_red"),
     url(r'^protest_target/', protest_target, name="protest_target"),
     url(r'^create_or_edit_post/', create_or_edit_post, name="create_or_edit_post"),
     url(r'^post_detail/', post_detail, name="post_detail"),
     url(r'^get_posts/', get_posts, name="get_posts"),
+    url(r'^post$', RedirectView.as_view(url='posts/')),
+    url(r'^posts/', include('posts.urls')),
     url(r'^needsform/', NeedsForm, name="NeedsForm"),
 ]

@@ -82,56 +82,24 @@
     <br>
 
     <footer>
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="container">
-                        <div class="container">
-                            <h5>Follow Us!</h5>
-                            <!--Facebook-->
-                            <span><a href="https://www.facebook.com"><i class="fa fa-facebook-square 5x" aria-hidden="true"></i></a></span>
-                            <!--Twitter-->
-                            <span><a href="https://www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>
-                            <!--Instagram-->
-                            <span><a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
-                        </div>
-
-                        <div class="container">
-                            <br>
-                            <div class="display">
-                                <form action="{% url 'search' %}" method="get">
-                                    <input type="text" name="q">
-                                    <button type="submit">Search</button>
-                                </form>
-                                <br>
-                            </div>
-                            <p>Made by Derek Olson</p>
-                        </div>
-                    </div>
+                        <h5>Follow Us!</h5>
+                        <!--Facebook-->
+                        <span><a href="https://www.facebook.com"><i class="fa fa-facebook-square 5x" aria-hidden="true"></i></a></span>
+                        <!--Twitter-->
+                        <span><a href="https://www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></span>
+                        <!--Instagram-->
+                        <span><a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
                 </div>
-
-                <!--Testimonials-->
+                <!---->
                 <div class="col-md-6">
-                    <div class="test-container">
-                        <h4>Testimonials</h4>
-                        <!--Example-->
-                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                        <p>No one is better than Noir Digital.</p>
-                        <!--Code-->
-                        {% for posts in post_detail %}
-                        
-                        <p><span>{{ user.username }}</span>{{ post.title }}</p>
-                        
-                                {% if post.content %}
-                        <p>{{ post.content|truncatewords:30 }}</p>
-                            {% endif %}
-                            
-                        {% endfor %}
-                    </div>
+                    <h4>Made by Derek Olson</h4>
                 </div>
-             
             </div>
+
+        </div>
 
     </footer>
 </body>

@@ -17,7 +17,7 @@ def get_posts(request):
     return render(request, "getposts.html", {'posts': posts})
 
 
-def post_detail(request, pk):
+def post_detail(request):
     """
     Create a view that returns a single
     Post object based on the post ID (pk) and
@@ -25,11 +25,9 @@ def post_detail(request, pk):
     Or return a 404 error if the post is
     not found
     """
-    
-    post = get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(Post)
     post.views += 1
     post.save()
-    messages.success(request, 'You have successfully edited a testimonial.')
     return render(request, "postdetail.html", {'post': post})
 
 def create_or_edit_post(request, pk=None):

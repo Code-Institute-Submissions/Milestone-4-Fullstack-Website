@@ -13,13 +13,13 @@
                 <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                 <p><span class="boldtext">Views:</span> {{post.views}}</p>
                 <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-               
+                <a href="{% url 'profile' %}" class="btn btn-default">Back to Profile</a>
+                <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
                 <hr>
             </div>
         </div>
     </div>
+
 </div>
 {% endblock %}
 
-<!-- <a href="{% url '' %}" class="btn btn-default">Back to Profile</a>
-                <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>-->

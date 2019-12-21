@@ -5,21 +5,36 @@
   <div class="row">
     <div class="column">
 
-      <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/girl_with_gun_red.jpg' %}" width="460" height="345"></a>
-      <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/hood_grey.jpg' %}" width="460" height="345"></a>
+      <a href="/girl_with_gun_red"><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/girl_with_gun_red.jpg' %}" width="460" height="345"></a>
+
+      <a href="/hood_grey"><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/hood_grey.jpg' %}" width="460" height="345"></a>
     </div>
+
     <div class="column">
-      <a href=""><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/house.jpg' %}" width="460" height="345"></a>
-      <a href=""><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/car_lens_flare_blue.jpg' %}" width="460" height="345"></a>
+      <a href="/house"><img class="img-fluid img-thumbnail" alt="girl_with_gun_red" src="{% static 'img/house.jpg' %}" width="460" height="345"></a>
+
+      <a href="/car_lens_flare_blue"><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/car_lens_flare_blue.jpg' %}" width="460" height="345"></a>
     </div>
+
     <div class="column">
       <a href="/protest_target"><img class="img-fluid img-thumbnail" alt="protest target" src="{% static 'img/protest_target.jpg' %}" width="460" height="345"></a>
+
       <a href="/city"><img class="img-fluid img-thumbnail" alt="city" src="{% static 'img/city.jpg' %}" width="460" height="345"></a>
     </div>
+
     <div class="column">
-      <a href=""><img class="img-fluid img-thumbnail" alt="smoking_man_brown" src="{% static 'img/smoking_man_brown.jpg' %}" width="460" height="345"></a>
-      <a href=""><img class="img-fluid img-thumbnail" alt="storefront_ice" src="{% static 'img/storefront_ice.jpg' %}" width="460" height="345"></a>
+      <a href="/smoking_man_brown"><img class="img-fluid img-thumbnail" alt="smoking_man_brown" src="{% static 'img/smoking_man_brown.jpg' %}" width="460" height="345"></a>
+
+      <a href="/storefront_ice"><img class="img-fluid img-thumbnail" alt="storefront_ice" src="{% static 'img/storefront_ice.jpg' %}" width="460" height="345"></a>
     </div>
   </div>
+  
+  <!--Testimonials-->
+      <hr>
+      <h1>Testimonials</h1>
+        <!--Code-->
+       {% block bar %}
+       {% include "getposts.html" %}
+       {% endblock %}
 </div>
 {% endblock %}
